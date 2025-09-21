@@ -59,6 +59,8 @@ export default function OnlineStatusManager() {
   // Add a new user ID and fetch their status
   const addUser = async () => {
     if (!newUserId) return; // Don't add empty IDs
+    
+    console.log('Adding user:', newUserId);
 
     // Make a POST request to add the user (assuming a simple post to add a new user)
     const res = await fetch('/api/users', {
